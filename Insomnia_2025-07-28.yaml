@@ -1,0 +1,323 @@
+type: collection.insomnia.rest/5.0
+name: ForoRequests
+meta:
+  id: wrk_fd7ff42a71ef417aa3d83cc38e5e7c8f
+  created: 1753379937532
+  modified: 1753729511735
+  description: ""
+collection:
+  - url: http://localhost:8080/topics
+    name: Create topic
+    meta:
+      id: req_9cc3e01f4cd34defa0da7a17aa8432a7
+      created: 1753379938058
+      modified: 1753729446229
+      isPrivate: false
+      description: ""
+      sortKey: -1753379938058
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "title": "Topico ejemplo",
+            "message": "Mensaje de ejemplo",
+            "authorId": 1,
+            "courseId": 1
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzYzOTE4MywiZXhwIjoxNzUzNjQyNzgzfQ.zS1002dZpv3djoXthyj08yJKj93qLdREXJqpvmCQmnA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/login
+    name: Login
+    meta:
+      id: req_2b99bf531a9c4df380831c95e34f2452
+      created: 1753379996811
+      modified: 1753483024665
+      isPrivate: false
+      description: ""
+      sortKey: -1753379996811
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "username": "admin@example.com",
+          "password": "123456"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: none
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/topics/6
+    name: Update topic
+    meta:
+      id: req_465e7eb2447e42e59d080aee6cce4e69
+      created: 1753380054994
+      modified: 1753729408493
+      isPrivate: false
+      description: ""
+      sortKey: -1753380054994
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "id": 6,
+          "title": "Actualizacion de titulo",
+          "message": "Mensaje actualizado"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzYzOTE4MywiZXhwIjoxNzUzNjQyNzgzfQ.zS1002dZpv3djoXthyj08yJKj93qLdREXJqpvmCQmnA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/topics
+    name: Get all topics
+    meta:
+      id: req_a021ce98accb47a4b191a799d8e3b1d5
+      created: 1753380361265
+      modified: 1753727600287
+      isPrivate: false
+      description: ""
+      sortKey: -1753380361265
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzcyNzU4MywiZXhwIjoxNzUzNzMxMTgzfQ.l7TXkIwq5vC4UDahVx49EYL0lK8YC2EgZfL1vhb-d0I
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/topics/details/6
+    name: Get topic details
+    meta:
+      id: req_726d7fcd9bf448198ce1b1168b9341a9
+      created: 1753380415280
+      modified: 1753652219344
+      isPrivate: false
+      description: ""
+      sortKey: -1753380415280
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzYzOTE4MywiZXhwIjoxNzUzNjQyNzgzfQ.zS1002dZpv3djoXthyj08yJKj93qLdREXJqpvmCQmnA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/topics/filter?courseName=Second%20Course&year=2025
+    name: Filter topics
+    meta:
+      id: req_08d0c8df1fac4039a8c1f40e953e4b55
+      created: 1753380451565
+      modified: 1753639697168
+      isPrivate: false
+      description: ""
+      sortKey: -1753380451565
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzYzOTE4MywiZXhwIjoxNzUzNjQyNzgzfQ.zS1002dZpv3djoXthyj08yJKj93qLdREXJqpvmCQmnA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/topics/paginated?page=0&size=10
+    name: List paginated topics
+    meta:
+      id: req_27196b485b7e4d278a4526d0e58ec998
+      created: 1753380474909
+      modified: 1753639372364
+      isPrivate: false
+      description: ""
+      sortKey: -1753380474909
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzYzOTE4MywiZXhwIjoxNzUzNjQyNzgzfQ.zS1002dZpv3djoXthyj08yJKj93qLdREXJqpvmCQmnA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/topics/2
+    name: Delete topic
+    meta:
+      id: req_3c8046b8225a4d6eb48c1a88f9cce37b
+      created: 1753380507693
+      modified: 1753639306362
+      isPrivate: false
+      description: ""
+      sortKey: -1753380507693
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzYzOTE4MywiZXhwIjoxNzUzNjQyNzgzfQ.zS1002dZpv3djoXthyj08yJKj93qLdREXJqpvmCQmnA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/topics/6/logic
+    name: Delete topic (soft)
+    meta:
+      id: req_33f6eafc5f3b454ca135dca26d7bf07b
+      created: 1753380534012
+      modified: 1753652769602
+      isPrivate: false
+      description: ""
+      sortKey: -1753380534012
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzYzOTE4MywiZXhwIjoxNzUzNjQyNzgzfQ.zS1002dZpv3djoXthyj08yJKj93qLdREXJqpvmCQmnA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/courses
+    name: Create course
+    meta:
+      id: req_3c005e76fd4b41ea9820100f5d3c02a5
+      created: 1753486235029
+      modified: 1753729457882
+      isPrivate: false
+      description: ""
+      sortKey: -1753486235029
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+            "name": "Second Course",
+            "category": "Java"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzYzOTE4MywiZXhwIjoxNzUzNjQyNzgzfQ.zS1002dZpv3djoXthyj08yJKj93qLdREXJqpvmCQmnA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/courses
+    name: Get all Courses
+    meta:
+      id: req_80aafb8b43ab44608975aa0ae59a08c0
+      created: 1753640182059
+      modified: 1753652292995
+      isPrivate: false
+      description: ""
+      sortKey: -1753640182059
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.3.0
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBleGFtcGxlLmNvbSIsImlhdCI6MTc1MzYzOTE4MywiZXhwIjoxNzUzNjQyNzgzfQ.zS1002dZpv3djoXthyj08yJKj93qLdREXJqpvmCQmnA
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_dc1c43bed183548a33f44a57315d4d9b48d5536c
+    created: 1753379937554
+    modified: 1753379937554
+environments:
+  name: Base Environment
+  meta:
+    id: env_dc1c43bed183548a33f44a57315d4d9b48d5536c
+    created: 1753379937549
+    modified: 1753379937549
+    isPrivate: false
